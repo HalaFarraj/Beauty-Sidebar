@@ -1,0 +1,90 @@
+:root{
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+    overflow: hidden;
+    /* background-size:cover ; */
+}
+
+body{
+    
+}
+
+.wrapper{
+    display: flex;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    background-image: url('./3.jpg');
+}
+
+.background-wrapper video{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.background-wrapper{
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: red;
+    /* width: 200px; */
+    flex-basis: 93%;
+    transition: all 0.8s ease;
+    /* height: 100%; */
+}
+
+.sidebar{
+    flex-basis: 7%;
+    /* height: 100%; */
+    /* display:none; */
+    background: rgba(85, 74, 74, 0.788);
+    flex-grow: 1;
+    flex-shrink: 1;
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    /* -webkit-backdrop-filter: blur(5.4px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.64); */
+    transition: all 0.5s ease;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+i{
+    
+    display: block;
+    background: transparent;
+    /* border-radius: 16px; */
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    /* backdrop-filter: blur(7.4px); */
+    /* padding: 10px; */
+}
+
+@media only screen and (max-width: 1001px) {
+    .wrapper{
+        flex-direction: column;
+    }
+    .background-wrapper{
+        /* order: 2; */
+        flex-basis: 90%;
+    }
+    .sidebar{
+        /* order: 1; */
+        flex-basis: 10%;
+        flex-direction: row;
+    }
+}
